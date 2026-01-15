@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Rasya Aulia | Web Developer Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="src/input.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9',
+                        secondary: '#64748b',
+                        dark: '#0f172a',
+                        light: '#f8fafc'
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'typewriter': 'typewriter 2s steps(15) 1s 1 normal both',
+                        'blink-caret': 'blink-caret 0.75s step-end infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        typewriter: {
+                            'from': { width: '0' },
+                            'to': { width: '100%' }
+                        },
+                        'blink-caret': {
+                            'from, to': { 'border-color': 'transparent' },
+                            '50%': { 'border-color': '#0ea5e9' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-light dark:bg-dark text-dark dark:text-white font-sans overflow-x-hidden">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full bg-white/90 dark:bg-dark/90 backdrop-blur-sm z-50 shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <div class="flex items-center">
+                    <a href="#home" class="text-2xl font-bold text-primary">
+                        <span class="typewriter">Muhamad Rasya Aulia</span>
+                    </a>
+                </div>
+                <button id="hamburger"
+    class="block lg:hidden focus:outline-none"
+    aria-label="Toggle Menu">
+    <span class="hamburger-line origin-top-left"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line origin-bottom-left"></span>
+</button>
+                
+                <nav id="nav-menu" class="hidden absolute top-full left-0 w-full bg-white dark:bg-dark shadow-lg rounded-lg py-5 lg:static lg:flex lg:bg-transparent lg:shadow-none lg:py-0 lg:w-auto">
+                    <ul class="flex flex-col lg:flex-row lg:items-center">
+                        <li class="group">
+                            <a href="#home" class="nav-link block px-6 py-2 lg:px-4 hover:text-primary">Home</a>
+                        </li>
+                        <li class="group">
+                            <a href="#about" class="nav-link block px-6 py-2 lg:px-4 hover:text-primary">About</a>
+                        </li>
+                        <li class="group">
+                            <a href="#skills" class="nav-link block px-6 py-2 lg:px-4 hover:text-primary">Skills</a>
+                        </li>
+                        <li class="group">
+                            <a href="#portfolio" class="nav-link block px-6 py-2 lg:px-4 hover:text-primary">Portfolio</a>
+                        </li>
+                        <li class="group">
+                            <a href="#experience" class="nav-link block px-6 py-2 lg:px-4 hover:text-primary">Experience</a>
+                        </li>
+                        <li class="group">
+                            <a href="#contact" class="nav-link block px-6 py-2 lg:px-4 hover:text-primary">Contact</a>
+                        </li>
+                        <li class="px-6 py-2 lg:px-4">
+                            <button id="dark-toggle" class="flex items-center">
+                                <i class="fas fa-sun text-yellow-500 mr-2"></i>
+                                <div class="w-12 h-6 flex items-center bg-gray-300 rounded-full p-1">
+                                    <div class="toggle-circle bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-300"></div>
+                                </div>
+                                <i class="fas fa-moon text-gray-700 dark:text-gray-300 ml-2"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent -z-10"></div>
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 animate-fade-in">
+                    <h4 class="text-lg text-primary font-semibold mb-2">Hello, I'm</h4>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Muhammad Rasya Aulia</h1>
+                    <h2 class="text-2xl md:text-3xl font-medium text-secondary mb-6">
+                        <span class="text-dark dark:text-white">Web Developer</span> & Computer Science Student
+                    </h2>
+                    <p class="text-lg text-secondary mb-8 max-w-xl">
+                        Passionate about creating elegant, functional websites and applications. I specialize in front-end development with a focus on user experience and responsive design.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition duration-300 shadow-lg">Contact Me</a>
+                        <a href="#portfolio" class="border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-white transition duration-300">View Portfolio</a>
+                    </div>
+                </div>
+                
+                <!--IMAGE SECTION -->
+                <div class="lg:w-1/2 flex justify-center animate-slide-up">
+                    <div class="relative w-80 h-80 md:w-96 md:h-96">
+                        <!-- Animated background elements -->
+                        <div class="absolute inset-0">
+                            <!-- Main animated blob -->
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full animate-pulse-slow">
+                                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                    <path fill="#0EA5E9" fill-opacity="0.15" 
+                                          d="M47.4,-51C59.2,-35.6,65.1,-17.8,63.4,-1.7C61.7,14.5,52.6,28.9,40.8,36.6C28.9,44.2,14.5,45,-2,47C-18.4,49,-36.8,52.1,-45.4,44.5C-53.9,36.8,-52.5,18.4,-51.2,1.3C-49.9,-15.8,-48.7,-31.7,-40.2,-47.1C-31.7,-62.4,-15.8,-77.3,1,-78.3C17.8,-79.2,35.6,-66.3,47.4,-51Z"
+                                          transform="translate(100 100) scale(1.1)" />
+                                </svg>
+                            </div>
+                            
+                            <!-- Secondary decorative element -->
+                            <div class="absolute -bottom-8 -right-8 w-48 h-48 bg-gradient-to-br from-primary/20 to-cyan-400/10 rounded-full blur-2xl"></div>
+                            
+                            <!-- Floating dots -->
+                            <div class="absolute top-10 left-10 w-4 h-4 bg-primary/30 rounded-full animate-float"></div>
+                            <div class="absolute bottom-16 right-16 w-3 h-3 bg-cyan-400/30 rounded-full animate-float" style="animation-delay: 1s;"></div>
+                        </div>
+                        
+                        <!-- Profile image container -->
+                        <div class="relative z-20 w-full h-full">
+                            <!-- Gradient background -->
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary to-cyan-400 rounded-full blur-lg opacity-50"></div>
+                            
+                            <!-- Main profile image -->
+                            <img src="img/foto1.png" 
+                                 alt="Muhammad Rasya Aulia - Professional Web Developer"
+                                 class="relative w-full h-full object-cover rounded-full border-8 border-white dark:border-gray-800 shadow-2xl 
+                                        transform hover:scale-105 transition-all duration-500" />
+                            
+                            <!-- Online status indicator -->
+                            <div class="absolute bottom-6 right-6 w-5 h-5 bg-green-500 rounded-full border-4 border-white dark:border-gray-800 animate-pulse"></div>
+                            
+                            <!-- Decorative corner element -->
+                            <div class="absolute -top-2 -left-2 w-10 h-10 bg-primary/20 rounded-lg rotate-45"></div>
+                        </div>
+                        
+                        <!-- Floating info card -->
+                        <div class="absolute -bottom-6 -right-6 glass-effect rounded-xl p-4 shadow-2xl 
+                                   transform hover:scale-105 transition-transform duration-300 hidden md:block animate-slide-up"
+                             style="animation-delay: 0.5s;">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-code text-primary"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-dark dark:text-white">Open for Projects</p>
+                                    <p class="text-xs text-gray-500 dark:text-gray-400">Available now</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h4 class="text-primary font-semibold text-lg mb-2">About Me</h4>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get to Know Me</h2>
+                <p class="text-secondary max-w-2xl mx-auto">I'm a passionate developer who loves to create digital experiences that make a difference.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <img src="img/rasya2.jfif" 
+                         alt="About Me" 
+                         class="rounded-xl shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
+                </div>
+                <div class="lg:w-1/2 lg:pl-12">
+                    <h3 class="text-2xl font-bold mb-6">Professional Web Developer</h3>
+                    <p class="text-secondary mb-6">
+                        I am a Computer Science student with a strong passion for web development and programming. I enjoy turning complex problems into simple, beautiful, and intuitive designs. With over 2 years of experience in web development, I've worked on a variety of projects for clients and personal use.
+                    </p>
+                    <p class="text-secondary mb-8">
+                        When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge through blogging and tutorials.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-center p-4 rounded-lg bg-light dark:bg-gray-800 hover:bg-primary/5 transition duration-300">
+                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-laptop-code text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Frontend Development</h4>
+                                <p class="text-secondary text-sm">React, Vue, Tailwind CSS</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 rounded-lg bg-light dark:bg-gray-800 hover:bg-primary/5 transition duration-300">
+                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-server text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Backend Development</h4>
+                                <p class="text-secondary text-sm">Node.js, Express, MongoDB</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 rounded-lg bg-light dark:bg-gray-800 hover:bg-primary/5 transition duration-300">
+                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-mobile-alt text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Responsive Design</h4>
+                                <p class="text-secondary text-sm">Mobile-first approach</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 rounded-lg bg-light dark:bg-gray-800 hover:bg-primary/5 transition duration-300">
+                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-palette text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">UI/UX Design</h4>
+                                <p class="text-secondary text-sm">Figma, Adobe XD</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="inline-flex items-center text-primary font-semibold hover:underline group">
+                        Let's Connect
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform duration-300"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-light dark:bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h4 class="text-primary font-semibold text-lg mb-2">My Skills</h4>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Technical Expertise</h2>
+                <p class="text-secondary max-w-2xl mx-auto">I continuously learn and adapt to new technologies to stay at the forefront of web development.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-8">Frontend Skills</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">HTML/CSS</span>
+                                <span class="font-bold text-primary">95%</span>
+                            </div>
+                            <div class="skill-bar bg-gray-200 dark:bg-gray-700">
+                                <div class="skill-level bg-primary w-0" data-level="95"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">JavaScript</span>
+                                <span class="font-bold text-primary">90%</span>
+                            </div>
+                            <div class="skill-bar bg-gray-200 dark:bg-gray-700">
+                                <div class="skill-level bg-primary w-0" data-level="90"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">React</span>
+                                <span class="font-bold text-primary">45%</span>
+                            </div>
+                            <div class="skill-bar bg-gray-200 dark:bg-gray-700">
+                                <div class="skill-level bg-primary w-0" data-level="85"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Tailwind CSS</span>
+                                <span class="font-bold text-primary">90%</span>
+                            </div>
+                            <div class="skill-bar bg-gray-200 dark:bg-gray-700">
+                                <div class="skill-level bg-primary w-0" data-level="90"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-8">Backend & Tools</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Node.js</span>
+                                <span class="font-bold text-primary">80%</span>
+                            </div>
+                            <div class="skill-bar bg-gray-200 dark:bg-gray-700">
+                                <div class="skill-level bg-primary w-0" data-level="80"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">MongoDB</span>
+                                <span class="font-bold text-primary">55%</span>
+                            </div>
+                            <div class="skill-bar bg-gray-200 dark:bg-gray-700">
+                                <div class="skill-level bg-primary w-0" data-level="75"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">GitHub</span>
+                                <span class="font-bold text-primary">90%</span>
+                            </div>
+                            <div class="skill-bar bg-gray-200 dark:bg-gray-700">
+                                <div class="skill-level bg-primary w-0" data-level="90"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">UI/UX Design</span>
+                                <span class="font-bold text-primary">70%</span>
+                            </div>
+                            <div class="skill-bar bg-gray-200 dark:bg-gray-700">
+                                <div class="skill-level bg-primary w-0" data-level="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h4 class="text-primary font-semibold text-lg mb-2">Portfolio</h4>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">On Progress Projects</h2>
+                <p class="text-secondary max-w-2xl mx-auto">Here are some of my recent projects that showcase my skills and experience.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="portfolio-item bg-light dark:bg-dark rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" 
+                             alt="E-commerce Website" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-commerce Platform</h3>
+                        <p class="text-secondary mb-4">A full-featured online store with shopping cart, user authentication, and payment integration.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Html</span>
+                            <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Java</span>
+                            <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Css</span>
+                                 <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Cdn Tailwind</span>
+                        </div>
+                        <a href="e_commrce/index.html" class="text-primary font-semibold hover:underline flex items-center group"> 
+                            View Project
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform duration-300"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="portfolio-item bg-light dark:bg-dark rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80" 
+                             alt="Dashboard Analytics" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Analytics Dashboard</h3>
+                        <p class="text-secondary mb-4">Interactive data visualization dashboard with real-time charts and reporting features.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Html</span>
+                            <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Css</span>
+                            <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Java</span>
+                                             <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Tailwind</span>
+                        </div>
+                        <a href="analyticssite/index.html" class="text-primary font-semibold hover:underline flex items-center group">
+                            View Project
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform duration-300"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="portfolio-item bg-light dark:bg-dark rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Task Management App" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Task Management App</h3>
+                        <p class="text-secondary mb-4">Collaborative project management tool with drag-and-drop functionality and team collaboration.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">React</span>
+                            <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Firebase</span>
+                            <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Tailwind CSS</span>
+                        </div>
+                        <a href="#" class="text-primary font-semibold hover:underline flex items-center group">
+                            View Project Soon
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform duration-300"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-light dark:bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h4 class="text-primary font-semibold text-lg mb-2">Experience</h4>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Work & Education</h2>
+                <p class="text-secondary max-w-2xl mx-auto">My professional journey and academic background.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <!-- Work Experience -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold mb-8">Work Experience</h3>
+                    <div class="space-y-8">
+                        <div class="flex">
+                          
+                        
+                        <div class="flex">
+                            <div class="mr-6">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-code text-primary text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-xl font-bold mb-1">Web Development Intership</h4>
+                                <p class="text-primary font-semibold mb-2">Digital Agency | 2023 - 2023</p>
+                                <p class="text-secondary">Assisted in building client websites using HTML, CSS, JavaScript, and WordPress. Participated in code reviews and team meetings.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Education -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-8">Education</h3>
+                    <div class="space-y-8">
+                        <div class="flex">
+                            <div class="mr-6">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-graduation-cap text-primary text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-xl font-bold mb-1">High school</h4>
+                                <p class="text-primary font-semibold mb-2">Smk Negri 1 Gantar 2021 - 2024</p>
+                            </div> 
+                        </div>
+                          <div class="space-y-8">
+                        <div class="flex">
+                            <div class="mr-6">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-graduation-cap text-primary text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-xl font-bold mb-1">Student of Computer Science</h4>
+                                <p class="text-primary font-semibold mb-2">University subang 2025 - 2026</p>
+                            </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h4 class="text-primary font-semibold text-lg mb-2">Contact</h4>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-secondary max-w-2xl mx-auto">Have a project in mind or want to discuss opportunities? Feel free to reach out!</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-bold mb-6">Let's Work Together</h3>
+                    <p class="text-secondary mb-8">
+                        I'm currently available for freelance projects and full-time opportunities. Whether you need a website, web application, or consultation, I'd love to hear about your project.
+                    </p>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-center p-4 rounded-lg bg-light dark:bg-gray-800 hover:bg-primary/5 transition duration-300">
+                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-envelope text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Email</h4>
+                                <p class="text-secondary">rasyaaul05@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center p-4 rounded-lg bg-light dark:bg-gray-800 hover:bg-primary/5 transition duration-300">
+                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-map-marker-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Location</h4>
+                                <p class="text-secondary">Indramayu, Indonesia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center p-4 rounded-lg bg-light dark:bg-gray-800 hover:bg-primary/5 transition duration-300">
+                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-phone text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Phone</h4>
+                                <p class="text-secondary">+62 812 3456 7890</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/muhrasyaaulia" target="_blank" 
+                           class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition duration-300 transform hover:scale-110">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" 
+                           class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition duration-300 transform hover:scale-110">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://instagram.com/hallowrye" target="_blank" 
+                           class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition duration-300 transform hover:scale-110">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" 
+                           class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition duration-300 transform hover:scale-110">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <form id="contact-form" class="bg-light dark:bg-dark p-6 rounded-xl shadow-lg">
+                        <div class="mb-6">
+                            <label for="name" class="block font-medium mb-2">Full Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block font-medium mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-primary/90 transition duration-300 shadow-lg transform hover:scale-[1.02]">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-2">M. Rasya Aulia</h3>
+                    <p class="text-gray-400">Web Developer & Computer Science Student</p>
+                </div>
+                
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#home" class="hover:text-primary transition duration-300">Home</a>
+                    <a href="#about" class="hover:text-primary transition duration-300">About</a>
+                    <a href="#portfolio" class="hover:text-primary transition duration-300">Portfolio</a>
+                    <a href="#contact" class="hover:text-primary transition duration-300">Contact</a>
+                </div>
+                
+                <div class="flex space-x-4">
+                    <a href="https://github.com/muhrasyaaulia" target="_blank" 
+                       class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition duration-300 transform hover:scale-110">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" 
+                       class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition duration-300 transform hover:scale-110">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://instagram.com/hallowrye" target="_blank" 
+                       class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition duration-300 transform hover:scale-110">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Muhammad Rasya Aulia. All rights reserved.</p>
+                <p class="mt-2">Built with <i class="fas fa-heart text-red-500"></i> using Tailwind CSS</p>
+            </div>
+        </div>
+    </footer>
+
+  
+
+</body>
+<script src="src/script.js"></script>
+</html>
